@@ -14,7 +14,7 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://hydrometeorologi.vercel.app/api/data');
+        const response = await axios.get('https://hydrometeorologibackend.vercel.app/api/data');
         const newData = response.data.map(item => ({
           suhu: item.temperature.toString(),
           kelembaban: item.humidity.toString(),

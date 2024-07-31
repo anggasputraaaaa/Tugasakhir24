@@ -12,7 +12,7 @@ const MONGO_URI = process.env.MONGO_URI;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use('https://hydrometeorologi.vercel.app/api', sensorRoutes);
+app.use('/api', sensorRoutes);
 
 // Koneksi ke MongoDB
 mongoose.connect(MONGO_URI, {

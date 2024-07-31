@@ -15,7 +15,7 @@ const Ketinggian = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://hydrometeorologi.vercel.app/api/data');
+        const response = await axios.get('https://hydrometeorologibackend.vercel.app/api/data');
        
         const sortedData = response.data.sort((a, b) => {
           const dateA = new Date(`${a.date} ${a.time}`);
