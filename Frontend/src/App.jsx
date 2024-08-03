@@ -12,6 +12,7 @@ import Suhu from "./pages/Suhu";
 import Kelembaban from "./pages/Kelembaban";
 import Ketinggian from "./pages/Ketinggian";
 import Hujan from "./pages/Hujan";
+import About from "./pages/about"
 
 function App() {
   
@@ -58,6 +59,10 @@ function App() {
         {
           path: "/hujan",
           element: <Hujan />
+        },
+        {
+          path: "/about",
+          element: <About />
         }
       ]
     }

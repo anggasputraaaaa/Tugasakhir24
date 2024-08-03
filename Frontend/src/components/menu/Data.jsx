@@ -3,6 +3,7 @@ import { WiHumidity } from "react-icons/wi";
 import { FaWater } from "react-icons/fa";
 import { IoMdRainy } from "react-icons/io"
 import { RiDashboard2Line } from "react-icons/ri";
+import About from "../../assets/about.png"
 
 
 const Data = [
@@ -35,6 +36,12 @@ const Data = [
         title :"Curah Hujan",
         icon : <IoMdRainy className="text-white size-8"/>,
         url :"/hujan"
+    },
+    {
+        id : 6,
+        title :"About",
+        icon : <img src={About} alt="cuki" className="text-white size-8"/>,
+        url :"/about"
     }
 ]
 
