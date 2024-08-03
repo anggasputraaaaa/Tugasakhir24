@@ -16,25 +16,28 @@ const Ketinggian = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://hydrometeorologibackend.vercel.app/api/data');
-       
+        
+        // Sort the data based on date and time
         const sortedData = response.data.sort((a, b) => {
           const dateA = new Date(`${a.date} ${a.time}`);
           const dateB = new Date(`${b.date} ${b.time}`);
           return dateB - dateA;
         });
-
         
-        const newData = sortedData.slice(0,10).map(item => ({
+        // Extract the top 10 latest entries and map to desired format
+        const newData = sortedData.slice(0, 10).map(item => ({
           air: item.distance.toString(),
           waktu: item.time,
           tanggal: item.date,
         }));
         
-        console.log(newData)
+        // Check if the new data differs from the existing data
+        if (JSON.stringify(newData) !== JSON.stringify(tableRows)) {
+          setTableRows([...newData]);
+        }
         
-        setTableRows([ ...newData]);
-        
-        console.log(tableRows)
+        console.log('New Data:', newData);
+        console.log('Table Rows:', tableRows);
 
       } catch (error) {
         console.error('Error fetching data:', error);

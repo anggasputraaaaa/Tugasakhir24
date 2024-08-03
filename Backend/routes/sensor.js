@@ -14,8 +14,8 @@ const witaTime = new Date(utcOffset + (8 * 3600000));
 // Mendapatkan tanggal dalam format DD/MM/YYYY
 const date = witaTime.toLocaleDateString('en-GB');
 
-// Mendapatkan waktu dalam format HH:MM:SS
-const time = witaTime.toTimeString().split(' ')[0];
+// Mendapatkan waktu dalam format HH:MM
+const time = witaTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 
 
   try {
