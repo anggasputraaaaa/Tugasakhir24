@@ -10,7 +10,7 @@ const TABLE_HEAD = ["Tanggal","Waktu", "Curah Hujan",];
 const Hujan = () => {
   
   const [tableRows, setTableRows] = useState([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,7 +24,7 @@ const Hujan = () => {
         });
         
         // Extract the top 10 latest entries and map to desired format
-        const newData = sortedData.slice(0, 10).map(item => ({
+        const newData = sortedData.slice(0, 15).map(item => ({
           hujan: item.rainfall.toString(),
           waktu: item.time,
           tanggal: item.date,

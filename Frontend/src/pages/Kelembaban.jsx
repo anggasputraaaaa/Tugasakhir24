@@ -23,7 +23,7 @@ const Kelembaban = () => {
         });
         
         // Extract the top 10 latest entries and map to desired format
-        const newData = sortedData.slice(0, 10).map(item => ({
+        const newData = sortedData.slice(0, 15).map(item => ({
           Kelembaban: item.humidity.toString(),
           waktu: item.time,
           tanggal: item.date,
