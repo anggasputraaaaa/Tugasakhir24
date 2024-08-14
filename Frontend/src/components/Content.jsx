@@ -55,12 +55,12 @@ const Content = ({ dataka, datake }) => {
               </td>}
               {isi.kelembaban && <td className="p-4 group-hover:bg-[#676f9d] duration-300">
                 <Typography variant="small" color="white" className="font-raleway font-bold">
-                  {displayValue1(isi.kelembaban, '%')}
+                  {displayValue(isi.kelembaban, '%')}
                 </Typography>
               </td>}
               {isi.air && <td className="p-4 group-hover:bg-[#676f9d] duration-300">
                 <Typography variant="small" color="white" className="font-raleway font-bold">
-                  {displayValue(isi.air, 'cm')}
+                  {displayValue1(isi.air, 'cm')}
                 </Typography>
               </td>}
               {isi.hujan && <td className="p-4 group-hover:bg-[#676f9d] duration-300">
