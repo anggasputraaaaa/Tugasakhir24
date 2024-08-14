@@ -22,15 +22,15 @@ const Main = () => {
           tanggal: item.date,
         }));
 
-        // Sort data by time in descending order
+        // Sort data by date and time in descending order
         newData.sort((a, b) => {
-          const timeA = new Date(`${a.tanggal}T${a.waktu}`).getTime();
-          const timeB = new Date(`${b.tanggal}T${b.waktu}`).getTime();
-          return timeB - timeA; // Sort descending (latest first)
+          const dateTimeA = new Date(`${a.tanggal}T${a.waktu}`).getTime();
+          const dateTimeB = new Date(`${b.tanggal}T${b.waktu}`).getTime();
+          return dateTimeB - dateTimeA; // Sort descending (latest first)
         });
 
         // Set sorted data to state
-        setTableRows(prevRows => [...newData, ...prevRows]);
+        setTableRows(newData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
