@@ -85,9 +85,19 @@ const Card = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col px-24 items-start gap-9'>
-                <p className='text-white text-2xl font-raleway font-bold flex items-center gap-3'> <MdDateRange className='text-4xl' /> {tanggal}</p>
-                <p className='text-white text-2xl font-raleway font-bold flex items-center gap-3'> <MdAccessTime className='text-4xl' /> {waktu}</p>
+            <div className='flex flex-col gap-14 '>
+                <div className='pb-4 flex flex-col'>
+                    <p className='text-white text-2xl font-raleway font-bold flex items-center gap-3'> <MdDateRange className='text-4xl' /> {tanggal}</p>
+                    <p className='text-white text-2xl font-raleway font-bold flex items-center gap-3'> <MdAccessTime className='text-4xl' /> {waktu}</p>
+                </div>
+                <div className='flex flex-col gap-1'>
+                    <div className='font-bold font-raleway text-white text-lg underline'>Informasi Ketinggian Permukaan Air</div>
+                    <div className='flex flex-col'>
+                        <div className='font-bold font-raleway text-green-400 text-lg'> +275cm      = AMAN</div>
+                        <div className='font-bold font-raleway text-yellow-400 text-lg'> 275-200 cm = WASPADA </div>
+                        <div className='font-bold font-raleway text-red-400 text-lg'> -200cm        = BAHAYA </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
