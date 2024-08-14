@@ -7,9 +7,13 @@ const Content = ({ dataka, datake }) => {
   const displayValue = (value, unit) => {
     if (value === "0") {
       return "Error";
-    } else if (value === "-1") {
+    } 
+    return `${value} ${unit}`;
+  };
+  const displayValue1 = (value, unit) => {
+    if (value === "-1") {
       return "Error";
-    }
+    } 
     return `${value} ${unit}`;
   };
 
@@ -51,7 +55,7 @@ const Content = ({ dataka, datake }) => {
               </td>}
               {isi.kelembaban && <td className="p-4 group-hover:bg-[#676f9d] duration-300">
                 <Typography variant="small" color="white" className="font-raleway font-bold">
-                  {displayValue(isi.kelembaban, '%')}
+                  {displayValue1(isi.kelembaban, '%')}
                 </Typography>
               </td>}
               {isi.air && <td className="p-4 group-hover:bg-[#676f9d] duration-300">
